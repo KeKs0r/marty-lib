@@ -12,7 +12,7 @@ function validateHandlers(store) {
     }
 
     if (!actionPredicate) {
-      console.error(throw new ActionPredicateUndefinedError(handlerName, store));
+      console.error(new ActionPredicateUndefinedError(handlerName, store));
     }
   });
 }
