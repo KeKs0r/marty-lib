@@ -14,7 +14,8 @@ var RESERVED_FUNCTIONS = ['contextTypes', 'componentDidMount', 'componentWillRec
 
 module.exports = function (React) {
   var DEFAULT_CONTEXT_TYPES = {
-    app: React.PropTypes.object };
+    app: React.PropTypes.object
+  };
 
   return function createContainer(InnerComponent, config) {
     config = config || {};
@@ -72,7 +73,7 @@ module.exports = function (React) {
         };
       },
       done: function done(results) {
-        return React.createElement(InnerComponent, _extends({ ref: 'innerComponent' }, this.props, results, { app: this.app }));
+        return React.createElement(InnerComponent, _extends({ ref: "innerComponent" }, this.props, results, { app: this.app }));
       },
       getInnerComponent: function getInnerComponent() {
         return this.refs.innerComponent;

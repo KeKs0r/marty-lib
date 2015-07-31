@@ -10,11 +10,11 @@ function validateHandlers(store) {
     var actionHandler = store[handlerName];
 
     if (_.isUndefined(actionHandler) || _.isNull(actionHandler)) {
-      throw new ActionHandlerNotFoundError(handlerName, store);
+      console.error(new ActionHandlerNotFoundError(handlerName, store));
     }
 
     if (!actionPredicate) {
-      throw new ActionPredicateUndefinedError(handlerName, store);
+      console.error(new ActionPredicateUndefinedError(handlerName, store));
     }
   });
 }

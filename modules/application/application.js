@@ -46,6 +46,8 @@ module.exports = function (React) {
       currentApplicationIs(this);
     }
 
+    // Internal API used by DevTools to access the current application
+
     _createClass(Application, [{
       key: 'getAll',
       value: function getAll(type) {
@@ -114,7 +116,7 @@ module.exports = function (React) {
             var registerObject = function registerObject(obj, prefix) {
               _.each(obj, function (ctor, id) {
                 if (prefix) {
-                  id = '' + prefix + '.' + id;
+                  id = prefix + '.' + id;
                 }
 
                 if (_.isFunction(ctor)) {
@@ -285,7 +287,6 @@ module.exports = function (React) {
     return Application;
   })();
 
-  // Internal API used by DevTools to access the current application
   var currentApplication = undefined;
   var currentApplicationRequests = [];
 
