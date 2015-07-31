@@ -4,14 +4,14 @@ let appProperty = require('../core/appProperty');
 module.exports = function (React) {
   return function (/*...dependencies*/) {
     let contextTypes = {
-      app: React.PropTypes.object
+      marty: React.PropTypes.object
     };
 
     return {
       contextTypes: contextTypes,
       childContextTypes: contextTypes,
       getChildContext() {
-        return { app: findApp(this) };
+        return { marty: findApp(this) };
       },
       getInitialState: function () {
         appProperty(this);

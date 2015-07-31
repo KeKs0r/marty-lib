@@ -1,11 +1,11 @@
 function findApp(obj) {
   if (obj) {
-    if (obj.context && obj.context.app) {
-      return obj.context.app;
+    if (obj.context && obj.context.marty) {
+      return obj.context.marty;
     }
 
-    if (obj.props && obj.props.app) {
-      return obj.props.app;
+    if (obj.props && obj.props.marty) {
+      return obj.props.marty;
     }
   }
 }
