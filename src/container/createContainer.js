@@ -19,7 +19,7 @@ let RESERVED_FUNCTIONS = [
 
 module.exports = function (React) {
   let DEFAULT_CONTEXT_TYPES = {
-    app: React.PropTypes.object,
+    marty: React.PropTypes.object,
   };
 
   return function createContainer(InnerComponent, config) {
@@ -49,7 +49,7 @@ module.exports = function (React) {
       contextTypes: contextTypes,
       childContextTypes: DEFAULT_CONTEXT_TYPES,
       getChildContext() {
-        return { app: findApp(this) };
+        return { marty: findApp(this) };
       },
       componentDidMount() {
         let component = {
