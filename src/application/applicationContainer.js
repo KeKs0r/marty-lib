@@ -7,7 +7,7 @@ module.exports = function (React) {
       app: React.PropTypes.object
     },
     getChildContext() {
-      return { app: findApp(this) };
+      return { marty: findApp(this) };
     },
     render() {
       let { app, children } = this.props;
