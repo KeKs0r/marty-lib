@@ -4,7 +4,7 @@ let { isArray, extend } = require('../mindash');
 module.exports = function (React) {
   let ApplicationContainer = React.createClass({
     childContextTypes: {
-      app: React.PropTypes.object
+      marty: React.PropTypes.object
     },
     getChildContext() {
       return { marty: findApp(this) };
