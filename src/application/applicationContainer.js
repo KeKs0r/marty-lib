@@ -4,13 +4,13 @@ let { isArray, extend } = require('../mindash');
 module.exports = function (React) {
   let ApplicationContainer = React.createClass({
     childContextTypes: {
-      app: React.PropTypes.object
+      marty: React.PropTypes.object
     },
     getChildContext() {
-      return { app: findApp(this) };
+      return { marty: findApp(this) };
     },
     render() {
-      let { app, children } = this.props;
+      let { marty, children } = this.props;
 
       if (children) {
         if (isArray(children)) {
@@ -22,7 +22,7 @@ module.exports = function (React) {
 
       function cloneWithApp(element) {
         return React.createElement(element.type, extend({
-          app: app
+          marty: marty
         }, element.props));
       }
     }
