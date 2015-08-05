@@ -10,7 +10,7 @@ module.exports = function (React) {
       return { marty: findApp(this) };
     },
     render() {
-      let { app, children } = this.props;
+      let { marty, children } = this.props;
 
       if (children) {
         if (isArray(children)) {
@@ -22,7 +22,7 @@ module.exports = function (React) {
 
       function cloneWithApp(element) {
         return React.createElement(element.type, extend({
-          app: app
+          marty: marty
         }, element.props));
       }
     }
